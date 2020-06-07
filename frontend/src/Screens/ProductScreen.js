@@ -6,15 +6,18 @@ function ProductScreen(props) {
 	const product = data.products.find((x) => (x._id = props.match.params.id));
 
 	return (
+		// Back to Results Link
 		<div className="back-to-results">
 			<div>
 				<div>
 					<Link to="/">Back to results</Link>
 				</div>
+				{/* Img Div */}
 				<div className="details">
 					<div className="details-image">
 						<img src={product.image} alt="product" />
 					</div>
+					{/* Details Div */}
 					<div className="details-info">
 						<ul>
 							<li>{<h4>{product.name}</h4>}</li>
@@ -30,6 +33,7 @@ function ProductScreen(props) {
 							</li>
 						</ul>
 					</div>
+					{/* Action Div */}
 					<div className="details-action">
 						<ul>
 							<li>Price: {product.price}</li>
@@ -50,6 +54,9 @@ function ProductScreen(props) {
 					</div>
 				</div>
 			</div>
+			<section>
+				<div></div>
+			</section>
 		</div>
 	);
 }
