@@ -10,7 +10,7 @@
 		<div class="grid-container">
 			<header class="header">
 				<div class="brand">
-					<button>
+					<button onclick="openMenu()">
 						&#9776;
 					</button>
 					<a href="index.html">PetSquare</a>
@@ -20,6 +20,18 @@
 					<a href="cart.html">Cart</a>
 				</div>
 			</header>
+			<aside class="sidebar">
+				<h3>Catagories</h3>
+				<button class="sidebar-close-button" onclick="closeMenu()">x</button>
+				<ul class="sidebar-links">
+					<li>
+						<a href="index.html">Dogs</a>
+					</li>
+					<li>
+						<a href="index.html">Cats</a>
+					</li>
+				</ul>
+			</aside>
 			<main class="main">
 				<div class="content">
 					<ul class="products">
@@ -120,5 +132,13 @@
 				All Rights Reserved
 			</footer>
 		</div>
+		<script>
+			function openMenu() {
+				document.querySelector(".sidebar").classList.add("open");
+			}
+			function closeMenu() {
+				document.querySelector(".sidebar").classList.remove("open");
+			}
+		</script>
 	</body>
 </html>
